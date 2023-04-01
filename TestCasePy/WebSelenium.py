@@ -7,7 +7,7 @@ import yaml
 
 class BossSelenium:
     def __init__(self):
-        with open(file='../TestCaseYaml/BossSelenium.yaml', mode='r', encoding='utf-8') as e:
+        with open(file='../TestCaseYaml/Webselenium.yaml', mode='r', encoding='utf-8') as e:
             self.result = yaml.load_all(e.read(), yaml.FullLoader)
         option = webdriver.ChromeOptions()
         option.add_experimental_option('debuggerAddress', '127.0.0.1:9222')
@@ -20,7 +20,7 @@ class BossSelenium:
         for i in self.result:
             re_li.append(i)
         driver.get(re_li[0]['Url'])
-        for j in range(3, len(re_li)):
+        for j in range(1, len(re_li)):
             le = re_li[j]
             Position = le['BossSelenium']['PositionMode']
             Event = le['BossSelenium']['PositionMode']
@@ -52,14 +52,14 @@ class BossSelenium:
 
     # 运行方式选择，是否使用定时任务运行
     def run_time(self):
-        with open(file='../TestCaseYaml/BossSelenium.yaml', mode='r', encoding='utf-8') as e:
+        with open(file='../TestCaseYaml/Webselenium.yaml', mode='r', encoding='utf-8') as e:
             result = yaml.load_all(e.read(), yaml.FullLoader)
         ls = []
         for i in result:
             ls.append(i)
-        if ls[1]['TimingSwitch'] is not None:
+        if ls[0]['TimingSwitch'] is not None:
             scheduler = BlockingScheduler(timezone='Asia/Shanghai')
-            time = ls[2]['Timeing']
+            time = ls[0]['Timeing']
             scheduler.add_job(self.boss_selenium, trigger='cron', hour=time)
             scheduler.start()
         else:

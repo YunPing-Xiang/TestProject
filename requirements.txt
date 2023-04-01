@@ -1,3 +1,6 @@
 pyyaml
 selenium
 apscheduler
+uiautomator2
+pillow
+weditor

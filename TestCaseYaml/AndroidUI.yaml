@@ -1,0 +1,27 @@
+connect_mode: usb
+connect_address: 123456789F
+package_name: com.eg.android.BossGphone
+TimingSwitch: off
+Timeing: 9-18
+
+---
+
+android_ui:
+  position_mode: text
+  element: setting
+  event: click
+
+---
+
+android_ui:
+  position_mode: xpath
+  element: //android.widget.FrameLayout[@index='0']
+  event: click
+
+---
+
+android_ui:
+  position_mode: description
+  element: 设置
+  event: click
+

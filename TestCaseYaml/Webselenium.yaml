@@ -27,6 +27,5 @@ BossSelenium:
 BossSelenium:
   PositionMode: By.SCRIPT
   Element: //*[@id="container"]/div[1]/div/div[3]/div/ul/li[{}]/div[1]/a
-  Event: 'document.querySelector("#container > div.user-jobs-area > div > div.job-tab > '
-                          'span:nth-child(2)").click()'
+  Event: 'document.querySelector("#container > div.user-jobs-area > div > div.job-tab > span:nth-child(2)").click()'
   TimeSwitch: off
