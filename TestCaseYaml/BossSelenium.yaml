@@ -5,6 +5,7 @@ Timeing: 9-18
 
 ---
 
+# 使用xpath定位，点击事件
 BossSelenium:
   PositionMode: By.XPATH
   Element: //*[@id="container"]/div[1]/div/div[3]/div/ul/li[{}]/div[1]/a
@@ -13,6 +14,7 @@ BossSelenium:
 
 ---
 
+#xpath定位，输入数据
 BossSelenium:
   PositionMode: By.XPATH
   Element: //*[@id="container"]/div[1]/div/div[3]/div/ul/li[{}]/div[1]/a
@@ -21,6 +23,7 @@ BossSelenium:
 
 ---
 
+# script定位，点击事件
 BossSelenium:
   PositionMode: By.SCRIPT
   Element: //*[@id="container"]/div[1]/div/div[3]/div/ul/li[{}]/div[1]/a
